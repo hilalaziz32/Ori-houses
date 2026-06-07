@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:davebuyshouses-website.netlify.app)",
+      "Bash(curl -s -A \"Mozilla/5.0\" https://davebuyshouses-website.netlify.app/ -o dbh.html -D dbh_headers.txt)"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <title>Dave Buys Houses</title>
+  <desc>Default Open Graph image. Replace with real PNG/JPG before launch.</desc>
+  <rect width="1200" height="630" fill="#1F4429"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#7FD49B" opacity="0.5"/>
+  <g transform="translate(600, 240)">
+    <polygon points="-100,-30 0,-115 100,-30" fill="#F5F0E8"/>
+    <rect x="-86" y="-12" width="172" height="108" fill="#F5F0E8"/>
+    <path d="M -18,96 L -18,52 Q -18,32 0,32 Q 18,32 18,52 L 18,96 Z" fill="#1F4429"/>
+  </g>
+  <text x="600" y="430" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="58" font-weight="500" letter-spacing="8" fill="#F5F0E8">DAVE BUYS HOUSES</text>
+  <line x1="350" y1="455" x2="850" y2="455" stroke="#F5F0E8" stroke-width="1" opacity="0.4"/>
+  <text x="600" y="490" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" letter-spacing="6" fill="#F5F0E8" opacity="0.7">INDIANA</text>
+  <text x="600" y="560" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="26" fill="#F5F0E8" opacity="0.92">Cash offer in 24 hours  ·  Close in 7 days</text>
+</svg>

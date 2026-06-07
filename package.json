@@ -1,0 +1,17 @@
+{
+  "name": "dave-buys-houses",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "node scripts/check-dashes.js && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "check": "node scripts/check-dashes.js"
+  },
+  "dependencies": {
+    "next": "^16.2.7",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  }
+}
