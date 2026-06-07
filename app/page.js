@@ -3,6 +3,7 @@ import LeadForm from "@/components/LeadForm";
 import Faq from "@/components/Faq";
 import CTASection from "@/components/CTASection";
 import RelatedLinks from "@/components/RelatedLinks";
+import IndianaMap from "@/components/IndianaMap";
 import { SITE, CITIES, SITUATIONS, FAQ } from "@/lib/config";
 import { meta } from "@/lib/seo";
 
@@ -67,7 +68,7 @@ export default function Home() {
       <section>
         <div className="wrap">
           <div className="section-head"><span className="eyebrow">How it works</span><h2>Three steps. <span className="accent">Zero hassle.</span></h2><p>From the first call to cash in your hand, the whole process can be done in under two weeks.</p></div>
-          <div className="steps">
+          <div className="steps reveal">
             <div className="step"><div className="num">1</div><h3>Tell us about your house</h3><p>Fill out the form or call us at {SITE.phone}. We need basic details about your property and a way to reach you. Takes about a minute.</p></div>
             <div className="step"><div className="num">2</div><h3>Get your cash offer in 24 hours</h3><p>We review your property, run our research, and call you back with a fair cash offer within 24 hours. No pressure, no obligation.</p></div>
             <div className="step"><div className="num">3</div><h3>Close on your timeline</h3><p>Pick a closing date that works for you. Close in as little as 7 days, or take more time if you need it. You walk away with cash.</p></div>
@@ -79,7 +80,7 @@ export default function Home() {
       <section className="band-cream">
         <div className="wrap">
           <div className="section-head"><span className="eyebrow">Why sell to us</span><h2>Built for homeowners who need <span className="accent">certainty.</span></h2></div>
-          <div className="cards">
+          <div className="cards reveal">
             <div className="card"><span className="ic">&#128176;</span><h3>Fair cash offer, no lowballs</h3><p>Based on your home&apos;s actual condition and local comps, not a formula designed to nickel and dime you.</p></div>
             <div className="card"><span className="ic">&#128197;</span><h3>Close on your timeline</h3><p>Need to move fast? We can close in 7 days. Need more time? Pick the date that works for you.</p></div>
             <div className="card"><span className="ic">&#127959;</span><h3>Any house, any condition</h3><p>Storm damage, code violations, mold, hoarder situations, fire, foundation issues. We have seen it all and we still buy.</p></div>
@@ -93,8 +94,8 @@ export default function Home() {
       <section>
         <div className="wrap">
           <div className="section-head"><span className="eyebrow">The difference</span><h2>Selling to Dave vs <span className="accent">listing with an agent</span></h2><p>Two very different experiences. Here is a quick side by side so you can see what you are actually choosing.</p></div>
-          <div className="cmp"><table>
-            <thead><tr><th></th><th>Selling to Dave</th><th>Listing with an Agent</th></tr></thead>
+          <div className="cmp reveal"><table>
+            <thead><tr><th></th><th>Selling to Dave <span className="tag">Recommended</span></th><th>Listing with an Agent</th></tr></thead>
             <tbody>
               <tr><td>Commissions and fees</td><td>$0</td><td>6% on average</td></tr>
               <tr><td>Repairs needed</td><td>None</td><td>Often required</td></tr>
@@ -108,10 +109,27 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="coverage">
+        <div className="wrap split-map">
+          <div className="reveal">
+            <span className="eyebrow" style={{ textAlign: "left" }}>Coverage</span>
+            <h2>We buy houses across <span className="accent">Indiana.</span></h2>
+            <p style={{ color: "var(--muted)" }}>From the capital to the northern lakes, we are local cash buyers in five major markets and the towns around them. Pick yours to see how we help.</p>
+            <ul className="map-cities">
+              {CITIES.map((c) => (
+                <li key={c.slug}><Link href={`/markets/${c.slug}`}><span className="dot" aria-hidden="true"></span>{c.name}<span className="cty">{c.county}</span></Link></li>
+              ))}
+            </ul>
+            <Link className="btn btn-primary" href="/markets">See all markets</Link>
+          </div>
+          <div className="map-wrap reveal"><IndianaMap /></div>
+        </div>
+      </section>
+
       <section>
         <div className="wrap">
           <div className="section-head"><span className="eyebrow">Any situation</span><h2>We buy through the <span className="accent">hard situations.</span></h2><p>Whatever is happening with the house or your life, there is a good chance we have handled it before.</p></div>
-          <div className="chips">
+          <div className="chips reveal">
             <Link href="/situations/inherited-house">Inherited house</Link>
             <Link href="/situations/avoid-foreclosure">Facing foreclosure</Link>
             <Link href="/situations/probate">Probate</Link>
@@ -129,7 +147,7 @@ export default function Home() {
       <section className="band-cream">
         <div className="wrap">
           <div className="section-head"><span className="eyebrow">Real stories</span><h2>From homeowners just like <span className="accent">you.</span></h2></div>
-          <div className="reviews-grid">
+          <div className="reviews-grid reveal">
             <div className="review"><div className="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>I was dreading selling my mom&apos;s house after she passed. Dave&apos;s team made it unbelievably simple. Cash in hand in 12 days, no repairs, no stress. They even let us keep the closing date flexible while we sorted out family stuff.</p><div className="head"><span className="avatar" aria-hidden="true">MJ</span><div><div className="who">Maria J.</div><div className="where">Indianapolis</div></div></div></div>
             <div className="review"><div className="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>House had foundation issues and three agents told me I would need $40K in repairs before listing. Dave bought it as is for a fair price and closed in two weeks. I am honestly relieved I did not go the traditional route.</p><div className="head"><span className="avatar" aria-hidden="true">RT</span><div><div className="who">Robert T.</div><div className="where">Fort Wayne</div></div></div></div>
             <div className="review"><div className="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Behind on payments and did not want a foreclosure on my record. Reached out on a Tuesday, had an offer Wednesday, closed nine days later. Straight with me from the first call. Worth every star.</p><div className="head"><span className="avatar" aria-hidden="true">DK</span><div><div className="who">Denise K.</div><div className="where">Kokomo</div></div></div></div>

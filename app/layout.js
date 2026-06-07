@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/lib/config";
 import { localBusinessSchema } from "@/lib/seo";
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <Reveal />
       </body>
     </html>
   );
