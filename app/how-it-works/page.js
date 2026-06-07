@@ -9,7 +9,7 @@ import { meta } from "@/lib/seo";
 export const metadata = meta({ title: "How It Works", description: "Our simple three step process to sell your Indiana house for cash. Tell us about your house, get an offer in 24 hours, and close on your timeline.", path: "/how-it-works" });
 
 export default function Page() {
-  const faqs = [FAQ.close_speed, FAQ.offer_calc, FAQ.cost, FAQ.stay, FAQ.obligation];
+  const faqs = [FAQ.close_speed, FAQ.offer_calc, FAQ.cost, FAQ.obligation];
   return (
     <main id="main">
       <Breadcrumb trail={[{ name: "Home", href: "/" }, { name: "How It Works", href: "/how-it-works" }]} />

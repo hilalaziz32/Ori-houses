@@ -20,7 +20,7 @@ export default function Page() {
           <p><strong>Phone:</strong> <a href={`tel:${SITE.phoneRaw}`}>{SITE.phone}</a><br />
           <strong>Email:</strong> <a href={`mailto:${SITE.email}`}>{SITE.email}</a><br />
           <strong>Headquarters:</strong> {SITE.cityHQ}, {SITE.region}</p>
-          <p>We buy across Indianapolis, Fort Wayne, South Bend, Kokomo, Anderson, and the surrounding towns. Everything you share stays private. We never list your house publicly.</p>
+          <p>We buy across Indianapolis, Fort Wayne, South Bend, Kokomo, Anderson, and the surrounding towns. Everything you share stays private.</p>
           <p><a className="btn btn-call lg" href={`tel:${SITE.phoneRaw}`}><span aria-hidden="true">&#128222;</span> Call {SITE.phone}</a></p>
         </div>
         <LeadForm heading="Request your offer" sub="We will contact you within 24 hours." />

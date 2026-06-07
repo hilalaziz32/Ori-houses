@@ -43,7 +43,7 @@ export default function LeadForm({ heading = "Get Your Cash Offer", sub = "Fill 
         <span>By submitting your information you agree that we may call you, email you, or send SMS messages regarding selling your property. You may unsubscribe at anytime. You are agreeing to our <a href="/legal/privacy">Privacy Policy</a>.</span>
       </label>
       <button type="submit" className="btn btn-primary block lg" disabled={busy}>{busy ? "Sending..." : "Get My Cash Offer"}</button>
-      <p className="form-foot">No obligation. We never list your house publicly.</p>
+      <p className="form-foot">No obligation.</p>
     </form>
   );
 }
