@@ -40,7 +40,7 @@ export default function LeadForm({ heading = "Get Your Cash Offer", sub = "Fill 
       <label className="hp" aria-hidden="true"><input type="text" name="website" tabIndex={-1} autoComplete="off" /></label>
       <label className="consent">
         <input type="checkbox" name="consent" required />
-        <span>I agree to receive recurring calls and texts from {SITE.legal} at the number provided, including by automated means. Consent is not a condition of any sale. Message and data rates may apply. Reply STOP to opt out. See our <a href="/legal/sms-terms">SMS terms</a> and <a href="/legal/privacy">privacy policy</a>.</span>
+        <span>By submitting your information you agree that we may call you, email you, or send SMS messages regarding selling your property. You may unsubscribe at anytime. You are agreeing to our <a href="/legal/privacy">Privacy Policy</a>.</span>
       </label>
       <button type="submit" className="btn btn-primary block lg" disabled={busy}>{busy ? "Sending..." : "Get My Cash Offer"}</button>
       <p className="form-foot">No obligation. We never list your house publicly.</p>

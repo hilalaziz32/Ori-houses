@@ -14,7 +14,7 @@ export default function Page() {
       <Breadcrumb trail={[{ name: "Home", href: "/" }, { name: "About", href: "/about" }]} />
       <section className="page-hero"><div className="wrap"><h1>Built for homeowners who need certainty</h1><p>We are a local Indiana real estate investment company. We buy houses directly, with our own funds, so you get a clean cash sale without agents, banks, or surprises.</p></div></section>
       <section><div className="wrap narrow prose">
-        <p className="lead">{SITE.name} is operated by {SITE.legal}. We are investors, not a brokerage, which means we are the actual buyer. There is no middleman and no listing.</p>
+        <p className="lead">{SITE.name} is a local Indiana real estate investment company. We are investors, not a brokerage, which means we are the actual buyer. There is no middleman and no listing.</p>
         <h2>Fair cash offer, no lowballs</h2>
         <p>Our offers are based on your home&apos;s real condition and recent local comparable sales, not a one size fits all formula. We would rather make a fair offer you feel good about than waste your time with a number designed to nickel and dime you.</p>
         <h2>Any house, any condition</h2>

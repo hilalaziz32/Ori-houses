@@ -38,7 +38,6 @@ export default function Home() {
               <div><b>$0</b><span>Fees or commissions</span></div>
             </div>
             <div className="trust-badges">
-              <span><span className="ic" aria-hidden="true">&#9679;</span> Local Indiana team, not a call center</span>
               <span><span className="ic" aria-hidden="true">&#9679;</span> Cash buyer, close in days</span>
               <span><span className="ic" aria-hidden="true">&#9679;</span> No fees, ever</span>
             </div>
