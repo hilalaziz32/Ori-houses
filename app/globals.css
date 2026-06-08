@@ -172,7 +172,7 @@ section{padding:var(--space) 0}
 .page-hero .btn{margin-top:24px}
 
 /* Two column with form */
-.split{display:grid;grid-template-columns:1.2fr .8fr;gap:46px;align-items:start}
+.split{display:grid;grid-template-columns:1fr 1.3fr;gap:46px;align-items:start}
 
 /* Sticky mobile bar */
 .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:90;background:#fff;border-top:1px solid var(--line);padding:10px;gap:10px;box-shadow:0 -6px 20px rgba(0,0,0,.08)}

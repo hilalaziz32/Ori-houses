@@ -1,4 +1,4 @@
-import LeadForm from "@/components/LeadForm";
+import GHLLeadForm from "@/components/GHLLeadForm";
 import Breadcrumb from "@/components/Breadcrumb";
 import Faq from "@/components/Faq";
 import RelatedLinks from "@/components/RelatedLinks";
@@ -23,7 +23,7 @@ export default function Page() {
           <p>We buy across Indianapolis, Fort Wayne, South Bend, Kokomo, Anderson, and the surrounding towns. Everything you share stays private.</p>
           <p><a className="btn btn-call lg" href={`tel:${SITE.phoneRaw}`}><span aria-hidden="true">&#128222;</span> Call {SITE.phone}</a></p>
         </div>
-        <LeadForm heading="Request your offer" sub="We will contact you within 24 hours." />
+        <GHLLeadForm />
       </div></section>
       <Faq items={faqs} />
       <RelatedLinks title="Before you reach out" links={[{ href: "/how-it-works", label: "How it works" }, { href: "/faq", label: "Read the FAQ" }, { href: "/reviews", label: "See reviews" }, { href: "/markets", label: "Confirm your market" }]} />

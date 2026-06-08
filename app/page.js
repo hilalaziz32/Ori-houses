@@ -1,5 +1,5 @@
 import Link from "next/link";
-import LeadForm from "@/components/LeadForm";
+import GHLLeadForm from "@/components/GHLLeadForm";
 import Faq from "@/components/Faq";
 import CTASection from "@/components/CTASection";
 import RelatedLinks from "@/components/RelatedLinks";
@@ -44,7 +44,7 @@ export default function Home() {
           </div>
           <div className="form-wrap">
             <span className="form-badge">&#9733; {SITE.rating} from {SITE.ratingCount}+ reviews</span>
-            <LeadForm />
+            <GHLLeadForm card />
           </div>
         </div>
       </section>
