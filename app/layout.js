@@ -11,6 +11,7 @@ export const metadata = {
   title: { default: `${SITE.name} | Sell Your Indiana Home Fast for Cash`, template: `%s | ${SITE.name}` },
   description: SITE.description,
   icons: { icon: "/assets/favicon.svg" },
+  ...(SITE.googleVerification ? { verification: { google: SITE.googleVerification } } : {}),
 };
 
 export const viewport = { themeColor: SITE.themeColor };
