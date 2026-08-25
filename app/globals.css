@@ -282,19 +282,3 @@ section{padding:var(--space) 0}
 html.js .reveal{opacity:0;transform:translateY(18px)}
 html.js .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none}}
-
-/* GHL embed: reserve the box up front and hold a skeleton until the hosted form paints */
-.ghl-embed{display:grid}
-.ghl-skeleton,.ghl-frame{grid-area:1/1;min-width:0}
-.ghl-frame{width:100%;height:var(--ghl-h,783px);border:0;border-radius:3px;opacity:0;transition:opacity .3s ease}
-.ghl-embed.is-loaded .ghl-frame{opacity:1}
-.ghl-skeleton{display:flex;flex-direction:column;gap:16px;padding-top:4px;pointer-events:none;transition:opacity .3s ease}
-.ghl-embed.is-loaded .ghl-skeleton{opacity:0}
-.ghl-skeleton span{display:block;border-radius:8px;background:linear-gradient(90deg,#ebeee9 25%,#f7f8f5 37%,#ebeee9 63%);background-size:400% 100%;animation:ghl-shimmer 1.4s ease infinite}
-.ghl-sk-title{height:30px;width:62%;margin:2px auto 0;border-radius:10px}
-.ghl-sk-line{height:13px;width:82%;margin:0 auto 4px}
-.ghl-sk-field{height:52px;width:100%;flex:none}
-.ghl-sk-fill{flex:1;min-height:0;background:none;animation:none}
-.ghl-sk-btn{height:54px;width:100%;border-radius:999px;flex:none}
-@keyframes ghl-shimmer{0%{background-position:100% 50%}100%{background-position:0 50%}}
-@media(prefers-reduced-motion:reduce){.ghl-skeleton span{animation:none}}

@@ -44,7 +44,7 @@ export default function Home() {
           </div>
           <div className="form-wrap">
             <span className="form-badge">&#9733; {SITE.rating} from {SITE.ratingCount}+ reviews</span>
-            <GHLLeadForm card priority />
+            <GHLLeadForm card />
           </div>
         </div>
       </section>
