@@ -34,6 +34,9 @@ const COLS = [
   ]},
 ];
 
+// The footer carries 22 links and sits on every page, so leaving prefetch on meant every
+// page pulled ~22 RSC payloads (~126 KB gz) as soon as the footer scrolled into view.
+// The header nav and CTAs keep prefetch; these sitemap-style links do not.
 export default function Footer() {
   return (
     <>
@@ -48,13 +51,13 @@ export default function Footer() {
           {COLS.map((c) => (
             <div className="fcol" key={c.h}>
               <h3>{c.h}</h3>
-              <ul>{c.links.map((l) => <li key={l.href}><Link href={l.href}>{l.label}</Link></li>)}</ul>
+              <ul>{c.links.map((l) => <li key={l.href}><Link href={l.href} prefetch={false}>{l.label}</Link></li>)}</ul>
             </div>
           ))}
         </div>
         <div className="wrap fbar">
           <p>&copy; 2026 {SITE.name}. All rights reserved.</p>
-          <p className="legal-links"><Link href="/legal/privacy">Privacy Policy</Link> <Link href="/legal/terms">Terms of Service</Link> <Link href="/legal/sms-terms">SMS Terms</Link></p>
+          <p className="legal-links"><Link href="/legal/privacy" prefetch={false}>Privacy Policy</Link> <Link href="/legal/terms" prefetch={false}>Terms of Service</Link> <Link href="/legal/sms-terms" prefetch={false}>SMS Terms</Link></p>
         </div>
       </footer>
     </>
