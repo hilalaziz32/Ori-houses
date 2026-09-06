@@ -189,6 +189,7 @@ section{padding:var(--space) 0}
 .site-footer a:hover{color:#fff}
 .fbrand p{font-size:.92rem;color:#9fb3a4}
 .fbrand .brand-text strong,.fbrand .brand-text em{color:#fff}
+.fbrand p.dba{color:#cdd8cf;font-weight:600}
 .nap a{color:#cdd8cf}
 .fbar{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:20px;font-size:.85rem;color:#8aa292}
 .legal-links a{margin-left:16px;color:#8aa292}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import StickyBar from "./StickyBar";
-import { SITE } from "@/lib/config";
+import { SITE, addressLine, dbaLine } from "@/lib/config";
 
 const COLS = [
   { h: "Company", links: [
@@ -46,7 +46,8 @@ export default function Footer() {
           <div className="fcol fbrand">
             <Link className="brand" href="/"><span className="brand-text"><strong>DAVE BUYS HOUSES</strong><em>INDIANA</em></span></Link>
             <p>{SITE.name} is a local Indiana cash home buyer. We are real estate investors who purchase properties directly as principals. We are not licensed real estate agents or a brokerage.</p>
-            <p className="nap"><a href={`tel:${SITE.phoneRaw}`}>{SITE.phone}</a><br /><a href={`mailto:${SITE.email}`}>{SITE.email}</a><br />{SITE.cityHQ}, {SITE.region}</p>
+            <p className="dba">{dbaLine()}</p>
+            <p className="nap"><a href={`tel:${SITE.phoneRaw}`}>{SITE.phone}</a><br /><a href={`mailto:${SITE.email}`}>{SITE.email}</a><br />{addressLine()}</p>
           </div>
           {COLS.map((c) => (
             <div className="fcol" key={c.h}>
