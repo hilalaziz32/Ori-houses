@@ -26,7 +26,12 @@ const PAGES = {
         <h2>How we share your information</h2>
         <p>We do not sell your personal information to third parties. We may share it with service providers who help us operate, such as title companies, and when required to do so by law.</p>
         <h2>SMS and Mobile Information</h2>
-        <p>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. All other categories of information exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
+        <p><strong>Our SMS Program.</strong> {SITE.name} ({SITE.legal}) operates a text messaging program for homeowners who request a cash offer on their property. We send two types of messages: transactional messages (offer updates, appointment reminders, and notifications about your property) and marketing or promotional messages about our services.</p>
+        <p><strong>How You Opt In.</strong> You opt in by submitting the cash offer request form on our website and checking the applicable SMS consent checkbox. Consent for transactional messages and consent for marketing messages are collected separately, and neither is required to submit the form or to receive a cash offer. Providing your phone number alone does not enroll you in text messages. We do not purchase, rent, or import phone lists.</p>
+        <p><strong>Message Frequency.</strong> Message frequency varies depending on your inquiry and the status of your property offer.</p>
+        <p><strong>Message and Data Rates.</strong> Message and data rates may apply, depending on your mobile carrier and plan.</p>
+        <p><strong>Opting Out and Help.</strong> You may opt out at any time by replying STOP to any message. Reply HELP for assistance, or contact us at <a href={`tel:${SITE.phoneRaw}`}>{SITE.phone}</a>. Opting out of one message type does not affect the other; you may opt out of both.</p>
+        <p><strong>No Sharing.</strong> No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. All other categories of information exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
         <h2>Your choices</h2>
         <p>You can ask us to update or delete your information, manage your communication preferences, or opt out of messages at any time, including by replying STOP to any text message. You can also reach us directly using the contact information below.</p>
         <h2>Security</h2>
