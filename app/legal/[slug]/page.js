@@ -107,10 +107,10 @@ const PAGES = {
         <p>Message frequency varies. Message and data rates may apply depending on your carrier and plan.</p>
         <h2>Opting out</h2>
         <p>Reply STOP at any time to stop receiving text messages. Reply HELP for help, or contact us at <a href={`tel:${SITE.phoneRaw}`}>{SITE.phone}</a> or <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
-        <h2>Carrier liability</h2>
-        <p>Mobile carriers are not liable for delayed or undelivered messages. Delivery depends on effective transmission by your carrier and is not guaranteed.</p>
-        <h2>Age restriction</h2>
-        <p>You must be at least 18 years old to consent to receive text messages from us.</p>
+        <h2>Age Requirement</h2>
+        <p>You must be 18 years or older to consent to receive text messages from {SITE.name}.</p>
+        <h2>Carrier Liability</h2>
+        <p>Carriers are not liable for delayed or undelivered messages. Delivery depends on effective transmission by your carrier and is not guaranteed.</p>
         <h2>Privacy</h2>
         <p>Information you provide is handled as described in our <a href="/legal/privacy">Privacy Policy</a>. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</p>
       </>

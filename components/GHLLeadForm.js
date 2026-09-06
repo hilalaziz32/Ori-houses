@@ -14,16 +14,16 @@ import Script from "next/script";
 // snippet's own data-height reserves the right space up front, so there is no jump.
 //
 // The preconnect hints below are the safe win: the embed needs a cold DNS + TCP + TLS
-// round trip before it can paint (~1.1s of TLS alone when measured), and warming those
-// two origins from the static HTML takes that off the form's critical path. They live in
-// this component so only the two pages that render the form open the sockets.
+// round trip before it can paint, and warming the two origins on its critical path takes
+// that off the form's time to first paint. They live in this component so only the two
+// pages that render the form open the sockets.
 export default function GHLLeadForm({ card = false }) {
   const form = (
     <>
       <iframe
-        src="https://cshbuys.com/widget/form/n2sbpQX8zRO25Y1A7HBG"
-        style={{ width: "100%", height: "950px", border: "none", borderRadius: "10px" }}
-        id="inline-n2sbpQX8zRO25Y1A7HBG"
+        src="https://api.leadconnectorhq.com/widget/form/LkPF1fKw1Q0eYX7VlcPF"
+        style={{ width: "100%", height: "1000px", border: "none", borderRadius: "10px" }}
+        id="inline-LkPF1fKw1Q0eYX7VlcPF"
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
         data-trigger-value=""
@@ -32,18 +32,20 @@ export default function GHLLeadForm({ card = false }) {
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
         data-form-name="Form For DBHO Website"
-        data-height="950"
-        data-layout-iframe-id="inline-n2sbpQX8zRO25Y1A7HBG"
-        data-form-id="n2sbpQX8zRO25Y1A7HBG"
+        data-height="1000"
+        data-layout-iframe-id="inline-LkPF1fKw1Q0eYX7VlcPF"
+        data-form-id="LkPF1fKw1Q0eYX7VlcPF"
+        data-cookie-consent="true"
+        data-cookie-consent-provider="auto"
         title="Request your offer"
       />
-      <Script src="https://cshbuys.com/js/form_embed.js" strategy="lazyOnload" />
+      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
     </>
   );
 
   return (
     <>
-      <link rel="preconnect" href="https://cshbuys.com" />
+      <link rel="preconnect" href="https://api.leadconnectorhq.com" />
       <link rel="preconnect" href="https://stcdn.leadconnectorhq.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="https://backend.leadconnectorhq.com" />
       {card ? <div className="lead-form" id="leadForm">{form}</div> : form}
