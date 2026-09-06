@@ -50,8 +50,8 @@ const PAGES = {
     title: "Terms of Service",
     body: (
       <>
-        <p className="post-meta">Last updated January 2026</p>
-        <p>By using this website you agree to these terms. {SITE.name} is operated by {SITE.legal}.</p>
+        <p className="post-meta">Last updated September 2026</p>
+        <p>By using this website you agree to these terms. {SITE.name} is a DBA of {SITE.legal}.</p>
         <h2>Who we are</h2>
         <p>We are a real estate investment company. We purchase properties directly as principals. We are not licensed real estate agents and we do not provide brokerage services.</p>
         <h2>No professional advice</h2>
@@ -60,6 +60,38 @@ const PAGES = {
         <p>Any cash offer we make is non binding until a written purchase agreement is signed by both parties. Offers are based on the information provided and may change if that information is inaccurate.</p>
         <h2>Use of the site</h2>
         <p>You agree not to misuse the site or submit false information. We may update these terms at any time by posting a revised version here.</p>
+
+        <h2>Text messaging program</h2>
+        <p>{SITE.name}, a DBA of {SITE.legal}, operates a text messaging program for homeowners who contact us about selling a property. If you provide your mobile number and check the consent box on our form, you may receive recurring text messages from us, including messages sent by automated means, for these purposes:</p>
+        <ul>
+          <li>Responding to your request for a cash offer on your property.</li>
+          <li>Following up on your inquiry and answering questions about the process.</li>
+          <li>Scheduling and confirming property walkthroughs or appointments.</li>
+          <li>Sending updates about your offer, the purchase agreement, and closing.</li>
+          <li>Occasional information about related services we offer.</li>
+        </ul>
+        <p>Consent to receive text messages is not a condition of selling us your property or of using any of our services.</p>
+
+        <h2>Message frequency</h2>
+        <p>Message frequency varies and depends on how you interact with us.</p>
+
+        <h2>Message and data rates</h2>
+        <p>Message and data rates may apply. Standard message and data rates from your mobile carrier apply to every message you send or receive, according to your plan.</p>
+
+        <h2>How to opt out</h2>
+        <p>You can cancel at any time. Text STOP to any message you receive from us, or reply STOP to the number that messaged you, and we will stop sending text messages to that number. You may receive one final message confirming that you have been unsubscribed. After that you will not receive further text messages from us unless you opt back in.</p>
+
+        <h2>How to get help</h2>
+        <p>Text HELP to any message you receive from us for assistance. You can also reach us directly at <a href={`tel:${SITE.phoneRaw}`}>{SITE.phone}</a> or <a href={`mailto:${SITE.email}`}>{SITE.email}</a>, or by mail at {SITE.address.street}, {SITE.address.city}, {SITE.address.region} {SITE.address.zip}.</p>
+
+        <h2>Carrier liability</h2>
+        <p>Mobile carriers are not liable for delayed or undelivered messages. Delivery of text messages depends on effective transmission by your mobile carrier and is not guaranteed. Not all mobile devices or carriers may support the program.</p>
+
+        <h2>Age restriction</h2>
+        <p>You must be at least 18 years old to consent to receive text messages from us, to submit information through this website, and to use our services. We do not knowingly collect information from anyone under the age of 18.</p>
+
+        <h2>Privacy</h2>
+        <p>Information you provide is handled as described in our <a href="/legal/privacy">Privacy Policy</a>. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. See also our <a href="/legal/sms-terms">SMS Terms</a>.</p>
       </>
     ),
   },
@@ -67,14 +99,20 @@ const PAGES = {
     title: "SMS Terms",
     body: (
       <>
-        <p className="post-meta">Last updated January 2026</p>
-        <p>By providing your phone number and checking the consent box, you agree to receive recurring calls and text messages from {SITE.legal} at the number provided, including messages sent by automated means.</p>
+        <p className="post-meta">Last updated September 2026</p>
+        <p>By providing your phone number and checking the consent box, you agree to receive recurring calls and text messages from {SITE.name}, a DBA of {SITE.legal}, at the number provided, including messages sent by automated means. Messages relate to your request for a cash offer: replies to your inquiry, appointment scheduling, updates on your offer and closing, and occasional information about related services.</p>
         <h2>Consent is not a condition of sale</h2>
         <p>Agreeing to receive messages is not required to sell us your property or to use our services.</p>
         <h2>Message frequency and rates</h2>
         <p>Message frequency varies. Message and data rates may apply depending on your carrier and plan.</p>
         <h2>Opting out</h2>
         <p>Reply STOP at any time to stop receiving text messages. Reply HELP for help, or contact us at <a href={`tel:${SITE.phoneRaw}`}>{SITE.phone}</a> or <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+        <h2>Carrier liability</h2>
+        <p>Mobile carriers are not liable for delayed or undelivered messages. Delivery depends on effective transmission by your carrier and is not guaranteed.</p>
+        <h2>Age restriction</h2>
+        <p>You must be at least 18 years old to consent to receive text messages from us.</p>
+        <h2>Privacy</h2>
+        <p>Information you provide is handled as described in our <a href="/legal/privacy">Privacy Policy</a>. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</p>
       </>
     ),
   },
