@@ -16,10 +16,13 @@ import Script from "next/script";
 // when form_embed.js resized it (CLS 0.235 on /contact). If fields are added or removed in
 // GHL, re-measure and update both height values below.
 //
-// form_embed.js also collapses the iframe to 0px for about 1.5s while it boots, which
-// pulled everything below the form up by ~1200px and back down again. The .ghl-form-slot
-// wrapper only sets a min-height (globals.css), so the script can still restyle the iframe
-// freely, but the space it occupies can no longer collapse.
+// data-initial-iframe-hidden="true" is the flag form_embed.js sets after its own "hide every
+// form until it reports its first height" pass, so pre-setting it skips that pass. On phones
+// the script arrives ~1s after the form starts drawing, so that pass hid a visible form for
+// ~2s (a second blink). We already reserve the right height, so the hide buys nothing here.
+//
+// The .ghl-form-slot wrapper (below) also carries a min-height (globals.css) so the space
+// stays reserved while form_embed.js hides and resizes the iframe.
 //
 // The preconnect hints below are the safe win: the embed needs a cold DNS + TCP + TLS
 // round trip before it can paint, and warming the two origins on its critical path takes
@@ -45,11 +48,19 @@ export default function GHLLeadForm({ card = false }) {
         data-form-id="LkPF1fKw1Q0eYX7VlcPF"
         data-cookie-consent="true"
         data-cookie-consent-provider="auto"
+        data-initial-iframe-hidden="true"
         title="Request your offer"
       />
       <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
     </>
   );
+
+  // id must be exactly `${iframe id}-wrapper`. form_embed.js looks for that parent and, if it
+  // finds it, leaves the iframe where it is. Without it the script moves the iframe into a
+  // wrapper it builds itself, and moving an iframe in the DOM makes the browser reload it:
+  // the visitor saw a ready form vanish and redraw ~2s later, and every asset (including
+  // GHL's Cloudflare Turnstile check) downloaded twice.
+  const slot = <div className="ghl-form-slot" id="inline-LkPF1fKw1Q0eYX7VlcPF-wrapper">{form}</div>;
 
   return (
     <>
@@ -57,7 +68,7 @@ export default function GHLLeadForm({ card = false }) {
       <link rel="preconnect" href="https://stcdn.leadconnectorhq.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="https://backend.leadconnectorhq.com" />
       <link rel="preconnect" href="https://challenges.cloudflare.com" />
-      {card ? <div className="lead-form" id="leadForm"><div className="ghl-form-slot">{form}</div></div> : <div className="ghl-form-slot">{form}</div>}
+      {card ? <div className="lead-form" id="leadForm">{slot}</div> : slot}
     </>
   );
 }
