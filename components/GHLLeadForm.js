@@ -11,7 +11,10 @@ import Script from "next/script";
 // One deliberate change from GHL's snippet: it ships height:100%, but this card has no
 // definite height, so 100% resolves to auto and the iframe collapses to its 150px default
 // until form_embed.js measures the form and rewrites the height. Pinning the box at the
-// snippet's own data-height reserves the right space up front, so there is no jump.
+// form's real rendered height (measured 1137 to 1228px across mobile and desktop, Nov 2026)
+// reserves the right space up front. The old 1000px reservation made the page jump ~200px
+// when form_embed.js resized it (CLS 0.235 on /contact). If fields are added or removed in
+// GHL, re-measure and update both height values below.
 //
 // The preconnect hints below are the safe win: the embed needs a cold DNS + TCP + TLS
 // round trip before it can paint, and warming the two origins on its critical path takes
@@ -22,7 +25,7 @@ export default function GHLLeadForm({ card = false }) {
     <>
       <iframe
         src="https://api.leadconnectorhq.com/widget/form/LkPF1fKw1Q0eYX7VlcPF"
-        style={{ width: "100%", height: "1000px", border: "none", borderRadius: "10px" }}
+        style={{ width: "100%", height: "1200px", border: "none", borderRadius: "10px" }}
         id="inline-LkPF1fKw1Q0eYX7VlcPF"
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
@@ -32,14 +35,14 @@ export default function GHLLeadForm({ card = false }) {
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
         data-form-name="Form For DBHO Website"
-        data-height="1000"
+        data-height="1200"
         data-layout-iframe-id="inline-LkPF1fKw1Q0eYX7VlcPF"
         data-form-id="LkPF1fKw1Q0eYX7VlcPF"
         data-cookie-consent="true"
         data-cookie-consent-provider="auto"
         title="Request your offer"
       />
-      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
+      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
     </>
   );
 
@@ -48,6 +51,7 @@ export default function GHLLeadForm({ card = false }) {
       <link rel="preconnect" href="https://api.leadconnectorhq.com" />
       <link rel="preconnect" href="https://stcdn.leadconnectorhq.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="https://backend.leadconnectorhq.com" />
+      <link rel="preconnect" href="https://challenges.cloudflare.com" />
       {card ? <div className="lead-form" id="leadForm">{form}</div> : form}
     </>
   );
