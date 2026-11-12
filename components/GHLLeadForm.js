@@ -16,6 +16,11 @@ import Script from "next/script";
 // when form_embed.js resized it (CLS 0.235 on /contact). If fields are added or removed in
 // GHL, re-measure and update both height values below.
 //
+// form_embed.js also collapses the iframe to 0px for about 1.5s while it boots, which
+// pulled everything below the form up by ~1200px and back down again. The .ghl-form-slot
+// wrapper only sets a min-height (globals.css), so the script can still restyle the iframe
+// freely, but the space it occupies can no longer collapse.
+//
 // The preconnect hints below are the safe win: the embed needs a cold DNS + TCP + TLS
 // round trip before it can paint, and warming the two origins on its critical path takes
 // that off the form's time to first paint. They live in this component so only the two
@@ -52,7 +57,7 @@ export default function GHLLeadForm({ card = false }) {
       <link rel="preconnect" href="https://stcdn.leadconnectorhq.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="https://backend.leadconnectorhq.com" />
       <link rel="preconnect" href="https://challenges.cloudflare.com" />
-      {card ? <div className="lead-form" id="leadForm">{form}</div> : form}
+      {card ? <div className="lead-form" id="leadForm"><div className="ghl-form-slot">{form}</div></div> : <div className="ghl-form-slot">{form}</div>}
     </>
   );
 }

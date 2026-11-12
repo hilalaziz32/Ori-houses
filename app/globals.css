@@ -283,3 +283,4 @@ section{padding:var(--space) 0}
 html.js .reveal{opacity:0;transform:translateY(18px)}
 html.js .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none}}
+.ghl-form-slot{min-height:1200px}
