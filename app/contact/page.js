@@ -5,7 +5,7 @@ import RelatedLinks from "@/components/RelatedLinks";
 import { SITE, FAQ, addressLine } from "@/lib/config";
 import { meta } from "@/lib/seo";
 
-export const metadata = meta({ title: "Contact | Get a Cash Offer", description: "Contact Dave Buys Houses for a fair, no obligation cash offer on your Indiana home within 24 hours. Call 317-526-4837 or request your offer online.", path: "/contact" });
+export const metadata = meta({ title: "Contact | Get a Cash Offer", description: `Contact Dave Buys Houses for a fair, no obligation cash offer on your Indiana home within 24 hours. Call ${SITE.phone} or request your offer online.`, path: "/contact" });
 
 export default function Page() {
   const faqs = [FAQ.cost, FAQ.close_speed, FAQ.obligation];
