@@ -105,7 +105,7 @@ const PAGES = {
     body: (
       <>
         <p className="post-meta">Last updated September 2026</p>
-        <p>By providing your phone number and checking the consent box, you agree to receive recurring calls and text messages from {SITE.name}, a DBA of {SITE.legal}, at the number provided, including messages sent by automated means. Messages relate to your request for a cash offer: replies to your inquiry, appointment scheduling, updates on your offer and closing, and occasional information about related services.</p>
+        <p>By providing your phone number and checking the consent box, you agree to receive recurring calls and text messages from {SITE.name} at the number provided, including messages sent by automated means. Messages relate to your request for a cash offer: replies to your inquiry, appointment scheduling, updates on your offer and closing, and occasional information about related services.</p>
         <h2>Consent is not a condition of sale</h2>
         <p>Agreeing to receive messages is not required to sell us your property or to use our services.</p>
         <h2>Message frequency and rates</h2>
